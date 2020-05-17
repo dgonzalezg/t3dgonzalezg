@@ -53,16 +53,16 @@ function App() {
     <div className="App">
       <div className="main container is-fluid tile is-ancestor">
         <div className="tile container is-fluid is-parent is-vertical">
-          <p className="title">Stocks</p>
+          <p className="stocks title">Stocks</p>
         {updates.length > 0 ? <Stock data={{updates, buys, sells}}></Stock>:null}
-        <p className="title">Exchanges</p>
+        <p className="exchanges title">Exchanges</p>
         {Object.keys(exchanges).length > 0 && stocks.length ? <Exchange data={{ exchanges, stocks, buys, sells}}></Exchange> : null}
         </div>
       
       </div>
       <footer className="footer">
-        <div className="container">
-          <p>Estado de Conexión: {connected ? 'Conectado':'Desconectado'}</p>
+        <div className="footer__container container">
+          <p className="title">Estado de Conexión: {connected ? 'Conectado':'Desconectado'}</p>
           <button className="header__button button" onClick={handleClick}>{connected ? 'Desconectar':'Conectar'}</button>
         </div>
     
