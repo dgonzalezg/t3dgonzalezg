@@ -1,0 +1,21 @@
+.stock {
+  display: flex;
+  .stock__graph {
+    float: left;
+  }
+  .stock__info {
+    float: right;
+    
+  }
+}
+
+.exchange {
+  display: flex;
+  .exchange__graph {
+    float: left;
+  }
+  .exchange__info {
+    float: right;
+  }
+}
+

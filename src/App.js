@@ -4,7 +4,7 @@ import './App.css';
 import io from 'socket.io-client';
 import Stock from './stock'
 import Exchange from './exchange';
-
+import './index.scss'
 const socket = io('wss://le-18262636.bitzonte.com', {
   path: '/stocks'
 });
@@ -15,6 +15,7 @@ function App() {
   const [buys, setBuys] = useState([]);
   const [sells, setSells] = useState([]);
   const [exchanges, setExchanges] = useState({});
+  const [stocks, setStocks] = useState([]);
 
   const handleClick = () => {
     if (socket.connected) {
@@ -42,17 +43,31 @@ function App() {
     socket.on('EXCHANGES', exchanges => {
       setExchanges(exchanges);
     })
+    socket.emit('STOCKS');
+    socket.on('STOCKS', stocks => {
+      setStocks(stocks);
+    })
   },[]);
- 
 
   return (
     <div className="App">
-      <div className="header">
-  <button className="header__button button" onClick={handleClick}>{connected ? 'Desconectar':'Conectar'}</button>
-  <p>Estado de Conexión: {connected ? 'Conectado':'Desconectado'}</p>
+      <div className="main container is-fluid tile is-ancestor">
+        <div className="tile container is-fluid is-parent is-vertical">
+          <p className="title">Stocks</p>
+        {updates.length > 0 ? <Stock data={{updates, buys, sells}}></Stock>:null}
+        <p className="title">Exchanges</p>
+        {Object.keys(exchanges).length > 0 && stocks.length ? <Exchange data={{ exchanges, stocks, buys, sells}}></Exchange> : null}
+        </div>
+      
       </div>
-      <Stock data={{updates, buys, sells}}></Stock>
-      <Exchange exchanges={exchanges}></Exchange>
+      <footer className="footer">
+        <div className="container">
+          <p>Estado de Conexión: {connected ? 'Conectado':'Desconectado'}</p>
+          <button className="header__button button" onClick={handleClick}>{connected ? 'Desconectar':'Conectar'}</button>
+        </div>
+    
+    
+      </footer>
     </div>
   );
 }
