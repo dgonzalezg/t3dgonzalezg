@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/t3dgonzalezg/static/css/main.c65ffdcb.chunk.css",
+    "main.css": "/t3dgonzalezg/static/css/main.6461d788.chunk.css",
     "main.js": "/t3dgonzalezg/static/js/main.81ff2b4f.chunk.js",
     "main.js.map": "/t3dgonzalezg/static/js/main.81ff2b4f.chunk.js.map",
     "runtime-main.js": "/t3dgonzalezg/static/js/runtime-main.8154f64b.js",
@@ -9,17 +9,17 @@
     "static/js/2.f45ce1e9.chunk.js": "/t3dgonzalezg/static/js/2.f45ce1e9.chunk.js",
     "static/js/2.f45ce1e9.chunk.js.map": "/t3dgonzalezg/static/js/2.f45ce1e9.chunk.js.map",
     "index.html": "/t3dgonzalezg/index.html",
-    "precache-manifest.de8cc8289faa0ab75a4e39860a26f9b7.js": "/t3dgonzalezg/precache-manifest.de8cc8289faa0ab75a4e39860a26f9b7.js",
+    "precache-manifest.a7b7914df9d36d0d555dc02cb0dce54f.js": "/t3dgonzalezg/precache-manifest.a7b7914df9d36d0d555dc02cb0dce54f.js",
     "service-worker.js": "/t3dgonzalezg/service-worker.js",
     "static/css/2.c4f291ab.chunk.css.map": "/t3dgonzalezg/static/css/2.c4f291ab.chunk.css.map",
-    "static/css/main.c65ffdcb.chunk.css.map": "/t3dgonzalezg/static/css/main.c65ffdcb.chunk.css.map",
+    "static/css/main.6461d788.chunk.css.map": "/t3dgonzalezg/static/css/main.6461d788.chunk.css.map",
     "static/js/2.f45ce1e9.chunk.js.LICENSE.txt": "/t3dgonzalezg/static/js/2.f45ce1e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8154f64b.js",
     "static/css/2.c4f291ab.chunk.css",
     "static/js/2.f45ce1e9.chunk.js",
-    "static/css/main.c65ffdcb.chunk.css",
+    "static/css/main.6461d788.chunk.css",
     "static/js/main.81ff2b4f.chunk.js"
   ]
 }
